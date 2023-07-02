@@ -1,0 +1,100 @@
+1.    Static Position:
+        Elements with the default position value of "static" are positioned according to the normal flow of the document.
+        The static position is the default positioning behavior applied to elements if no other position value is specified.
+
+html
+
+<style>
+   .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+   }
+</style>
+
+<div class="box">Static Position</div>
+
+2.    Fixed Position:
+        Elements with the position value "fixed" are positioned relative to the browser window or the nearest positioned ancestor that has a value other than "static".
+        Fixed-positioned elements remain fixed in their position even when the page is scrolled.
+
+html
+
+<style>
+   .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+   }
+</style>
+
+<div class="box">Fixed Position</div>
+
+3.    Sticky Position:
+        Elements with the position value "sticky" are positioned based on the user's scroll position.
+        A sticky-positioned element behaves like a "relative" element until it reaches a specified threshold (top, bottom, left, or right offset), and then it becomes "fixed" to that position.
+
+html
+
+<style>
+   .box {
+      position: sticky;
+      top: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: green;
+   }
+</style>
+
+<div class="box">Sticky Position</div>
+
+4.    Relative Position:
+        Elements with the position value "relative" are positioned relative to their normal position in the document flow.
+        Relative-positioned elements can be moved from their original position using top, bottom, left, or right properties.
+
+html
+
+<style>
+   .box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+   }
+</style>
+
+<div class="box">Relative Position</div>
+
+5.    Absolute Position:
+        Elements with the position value "absolute" are positioned relative to their nearest positioned ancestor (an ancestor with a position value other than "static").
+        Absolute-positioned elements are removed from the normal document flow and can be placed anywhere on the page.
+
+html
+
+<style>
+   .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+   }
+
+   .box {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+   }
+</style>
+
+<div class="container">
+   <div class="box">Absolute Position</div>
+</div>
