@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Basic Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form id="registrationForm" onsubmit="validateForm(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" minlength="6" required>
+    <br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" min="18" required>
+    <br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" required>
+    <br>
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" required>
+    <br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+
+     
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var password = document.getElementById("password").value;
+      var age = document.getElementById("age").value;
+      var gender = document.getElementById("gender").value;
+      var date = document.getElementById("date").value;
+      var color = document.getElementById("color").value;
+
+      
+      var isValid = true;
+
+      if (name.trim() === "") {
+        document.getElementById("name").classList.add("error");
+        isValid = false;
+      } else {
+        document.getElementById("name").classList.remove("error");
+      }
+
+      if (email.trim() === "") {
+        document.getElementById("email").classList.add("error");
+        isValid = false;
+      } else {
+        document.getElementById("email").classList.remove("error");
+      }
+
+      if (isValid) {
+        document.getElementById("registrationForm").submit();
+      }
+    }
+  </script>
+</body>
+</html>
