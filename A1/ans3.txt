@@ -1,0 +1,9 @@
+1.    Creation phase: In this phase, the JavaScript engine creates the execution context and sets up the script's environment. It determines the values of variables and functions and sets up the scope chain for the execution context.
+
+
+2.    Execution phase: In this phase, the JavaScript engine executes the code in the execution context. It processes any statements or expressions in the script and evaluates any function calls.
+
+
+    A. Variable Environment: Holds variables and function declarations. It is a place where variables and functions are stored and can be accessed during execution.
+    B. Scope Chain: Represents the hierarchical structure of variable objects. It determines the accessibility of variables based on lexical scoping rules.
+    C. This Binding: Refers to the value of the "this" keyword. It represents the context in which a function is called and can vary depending on the invocation.
